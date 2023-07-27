@@ -261,7 +261,7 @@ function romanToInt(romanNumeral) {
 // Task 8: Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
 
 
-const arrayValue = [0,10,40,50,30,20,90,70,100]
+const arrayValue = [10,40,50,30,20,90,70,100]
 
 function secondSmallestValue(arr){
   let first = Math.max(...arr),
