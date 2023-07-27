@@ -260,13 +260,25 @@ function romanToInt(romanNumeral) {
 
 // Task 8: Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
 
-const Array = [5, 2, 8, 3, 1, 7, 4];
 
-function findSecondSmallest(array) {
+const arrayValue = [0,10,40,50,30,20,90,70,100]
 
-  array.sort((a, b) => a - b);
+function secondSmallestValue(arr){
+  let first = Math.max(...arr),
+   second = Math.max(...arr);
 
-  return array[1];
+  for(let i = 0; i <= arr.length-1; i++){
+      if(arr[i] < first){
+          second = first;
+          first = arr[i];
+      }
+      else if( arr[i] < second && arr[i] != first){
+          second = arr[i];
+        }
+      }
+      return second
 }
 
-// console.log('Second smallest number : ',findSecondSmallest(Array)); 
+secondSmallestValue(arrayValue);
+
+console.log( 'Second Smallest Value is : ', secondSmallestValue(arrayValue))
